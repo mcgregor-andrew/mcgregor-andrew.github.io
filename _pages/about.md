@@ -1,6 +1,3 @@
-Hi, I'm a Professor in the [College of Information and Computer Sciences](http://www.cs.umass.edu/) at the [University of Massachusetts, Amherst.](http://www.umass.edu/)
-
-
 
 
 ---
