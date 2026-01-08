@@ -1,0 +1,31 @@
+<li class="pub-item">
+  <div class="pub-title">
+    {% if include.post.paperurl %}
+      <a href="{{ include.post.paperurl }}">{{ include.post.title }}</a>
+    {% else %}
+      <a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
+    {% endif %}
+  </div>
+
+  {% if include.post.authors %}
+  <div class="pub-authors">{{ include.post.authors }}</div>
+  {% endif %}
+
+  <div class="pub-links">
+    {% if include.post.paperurl %}<a class="pub-badge" href="{{ include.post.paperurl }}">PDF</a>{% endif %}
+    {% if include.post.codeurl %}<a class="pub-badge" href="{{ include.post.codeurl }}">Code</a>{% endif %}
+    {% if include.post.slidesurl %}<a class="pub-badge" href="{{ include.post.slidesurl }}">Slides</a>{% endif %}
+    {% if include.post.talkurl %}<a class="pub-badge" href="{{ include.post.talkurl }}">Talk</a>{% endif %}
+    {% if include.post.bibtexurl %}<a class="pub-badge" href="{{ include.post.bibtexurl }}">BibTeX</a>{% endif %}
+  </div>
+
+  {% if include.post.venue %}
+  <div class="pub-venue">
+    {{ include.post.venue }}{% if include.post.date %}. {{ include.post.date | date: "%Y" }}.{% endif %}
+  </div>
+  {% endif %}
+
+  {% if include.post.abstract %}
+  <div class="pub-abstract"><strong>Abstract</strong> {{ include.post.abstract }}</div>
+  {% endif %}
+</li>
