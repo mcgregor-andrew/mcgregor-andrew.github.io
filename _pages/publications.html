@@ -5,32 +5,328 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+See also <A HREF="http://scholar.google.com/citations?user=IpBjTKQAAAAJ&hl=en">Google Scholar</A> and <A HREF="http://dblp.uni-trier.de/pers/hd/m/McGregor_0001:Andrew">DBLP</A>. 
 
 
+<p> Journal Publications:
+<OL>
+<LI> Graphical House Allocation with Identical Valuations. 
+<BR> JAAMAS (with H. Hosseini, J. Payan, R. Sengupta, R. Vaish, V. Viswanathan).
+<LI> <A HREF="https://arxiv.org/abs/1904.09618">Trace Reconstruction: Generalized and Parameterized</A>
+<BR> IEEE Transactions on Information Theory  (with A. Krishnamurthy, A. Mazumdar, S. Pal)
+<LI> <A HREF= "../papers/15-icml.pdf">Correlation Clustering in Data Streams</A>
+<BR> Algorithmica (with K. Ahn, G. Cormode, S. Guha, A. Wirth) 
+<LI> <A HREF= "http://eccc.hpi-web.de/report/2014/086/">Verifiable Stream Computation and Arthur–Merlin Communication
+</A>
+<BR> SIAM Journal of Computing, 2019 (with A. Chakrabarti, G. Cormode, J. Thaler, S. Venkatasubramanian) 
+<LI> <A HREF="https://arxiv.org/abs/1706.09197">Storage Capacity as an Information-Theoretic Analogue of Vertex Cover</A>
+<BR> IEEE Transactions on Information Theory, 2019 (with A. Mazumdar, S. Vorotnikova)
+<LI> <A HREF="../papers/18-algorithmica.pdf">Structural Results on Matching Estimation with Applications to Streaming.</A>
+<BR> Algorithmica, 2019 (with M. Bury, E. Grigorescu, M. Monemizadeh, C. Schwiegelshohn, S. Vorotnikova)
+<LI> <A HREF="../papers/18-theorycs.pdf">Better Approximation of The Streaming Maximum Coverage Problem</A>
+<BR> Theory of Computer Systems 2019 (with H. Vu)
+<LI> <A HREF="http://dl.acm.org/citation.cfm?doid=2927928"> AUTOMAN: A Platform for Integrating Human-Based and Digital Computation</A>
+<BR>Communications of the ACM 59(6): 102-109 2016 (with D. Barowy, C. Curtsinger,  E. Berger)
+<LI> <A HREF="http://theoryofcomputing.org/articles/v012a010/">Robust Lower Bounds for Communication and Stream Computation</A>
+<BR> Theory of Computing 2016 (with A. Chakrabarti G. Cormode)
+<LI> <A HREF="../papers/15-vldbj.pdf">The matrix mechanism: optimizing linear counting queries under differential privacy</A>
+<BR> VLDB Journal 2015 (with C. Li, G. Miklau, M. Hay, V. Rastogi)
+<LI> <A HREF= "../papers/15-algorithmica.pdf"> Space-Efficient Estimation of Statistics over Sub-Sampled Streams</A>
+<BR> Algorithmica, 2015. (with A. Pavan, S. Tirthapura,  D. Woodruff)
+<LI> <A HREF="http://eccc.hpi-web.de/report/2012/022/">Annotations in Data Streams</A>
+<BR> ACM Transactions on Algorithms, 11 (2014), no. 1, pg. 1-30 (with A. Chakrabarti, G. Cormode, J. Thaler)
+<LI> <A HREF= "../papers/13-pq.pdf">Information Cost Tradeoffs for Augmented Index and Streaming Language Recognition</A>
+<BR> SIAM Journal of Computing, 42 (2013), no. 1, pg. 61–83. (with A. Chakrabarti, G. Cormode, R. Kondapally)
+<LI> <A HREF="../papers/12-tods.pdf">SCALLA: A Platform for Scalable One-Pass Analytics using MapReduce</A>
+<BR>  ACM Trans. Database Syst, 37 (2012), no. 4, pg. 1-43 (with B. Li, E. Mazur, Y. Diao, P. Shenoy)
+<LI> <A HREF="../papers/12-claro.pdf">CLARO: Modeling and Processing Uncertain Data Streams</A>
+<BR>  VLDB Journal, 21 (2012), no. 5, pg. 651-676  (with T. Tran, L. Peng, Y. Diao,  A. Liu)
+<LI> <A HREF="../papers/07-entropy.pdf">A Near-Optimal Algorithm for Computing the Entropy of a Stream</A>
+<BR> ACM Transactions on Algorithms, 6 (2010), no. 3, pg. 1-21 (with A. Chakrabarti, G. Cormode)
+<LI> <A HREF="../papers/08-ldpc.pdf"> On the Hardness of Approximating Stopping 
+and Trapping Sets </A>
+<BR> IEEE Transactions on Information Theory, 56 (2010), no. 4, pg. 1640-1650 (with O. Milenkovic) 
+<LI><A HREF="../papers/06-oracles.pdf">
+Sub-linear Estimation of Entropy and Information Distances </A>
+<BR> ACM Transactions on Algorithms, 5 (2009), no. 4, pg. 1-16. (with S. Guha, S. Venkatasubramanian)
+<LI> <A HREF="../papers/09-streamorderstatistics.pdf">
+Stream Order and Order Statistics: Quantile Estimation in Random-Order Streams 
+</A>
+<BR> SIAM Journal of Computing, 38 (2009), no. 5, 2044-2059 (with S. Guha)
+<LI> <A HREF="../papers/08-graphdistances.pdf">
+Graph Distances in the Data Stream Model
+</A>
+<BR> SIAM Journal of Computing, 38 (2008), no. 5, pg. 1709-1727 (with J. Feigenbaum, S. Kannan, S. Suri, J. Zhang)
+<LI> <A HREF="../papers/08-tods.pdf"> Estimating Statistical Aggregates on Probabilistic Data Streams</A>
+<BR> ACM Trans. Database Syst, 33 (2008), no. 4, pg. 1-30 (with T. S. Jayram, S. Muthukrishnan, E. Vee)
+<LI> <A HREF="../papers/07-unsketchables.pdf"> Sketching Information Divergences</A>
+<BR> Journal of Machine Learning, 72 (2008), no. 1-2, pg. 5-19 (with S. Guha, P. Indyk) 
+<LI> <A HREF="../papers/05-ieeetrans.pdf"> Distance distribution of binary codes and the error probability of decoding </A>
+<BR> IEEE Transactions on Information Theory, 51 (2005), no. 12, pg. 4237-4246. (with A. Barg) 
+<LI><A HREF="../papers/05-tcs.pdf">
+On Graph Problems in a Semi-Streaming Model</A>
+<BR>  Theoretical Computer Science, 348 (2005), no. 2-3, pg. 207-216. (with J. Feigenbaum, S. Kannan, S. Suri, J. Zhang)
+</OL>
+
+
+<p> Conference Publications (N.B. Links point to journal/extended versions if appropriate):
+<OL>
+<LI> Matchings in Low-Arboricity Graphs in the Dynamic Graph Stream Model. 
+<BR> FCTTCS 2024 (with C. Konrad, R. Sengupta, C. Than)
+<LI> Improved Algorithms for Maximum Coverage in Dynamic and Random Order Streams
+<BR> ESA 2024 (with A. Chakrabarti and A. Wirth)
+<LI> Scalable Scheduling Policies for Quantum Satellite Networks
+<BR> QCE 2024 (with A. Williams, N. Panigrahy, D. Towsley)
+<LI> Reconstruction from Noisy Random Subgraphs
+<BR> ISIT 2024 (with R. Sengupta)
+<LI> Tight Approximations for Graphical House Allocation
+<BR> AAMAS 2024 (with H. Hosseini, R. Sengupta, R. Vaish and V. Viswanathan)
+<LI> <a href="https://arxiv.org/pdf/2205.09804.pdf">Estimation of Entropy in Constant Space with Improved Sample Complexity</a>
+<BR> NeurIPS 2022 (with M. Aliakbarpour, J. Nelson, E. Waingarten)
+<LI> <a href="https://arxiv.org/abs/2211.06536">Improving the Efficiency of the PC Algorithm by Using Model-Based Conditional Independence Tests</a>
+<BR> CML4Impact 2022 (NeurIPS Workshop)  (with E. Cai, D. Jensen)
+<LI> <a href="https://arxiv.org/abs/2207.02817">Non-Adaptive Edge Counting and Sampling via Bipartite Independent Set Queries</a>
+<BR> ESA 2022 (with R. Addanki, C. Musco)
+<LI> <a href="https://drops.dagstuhl.de/opus/volltexte/2022/16437/pdf/LIPIcs-ICALP-2022-96.pdf">Graph Reconstruction from Random Subgraphs</a>
+<BR> ICALP 2022 (with R. Sengupta)
+<LI> <a href="https://arxiv.org/abs/2201.06678">Improved Approximation and Scalability for Fair Max-Min Diversification</a>
+<BR> ICDT 2022 (with R. Addanki, A. Meliou, Z. Moumoulidou)
+<li> <a href="https://dl.acm.org/doi/10.1145/3460090">PredictRoute: A Network Path Prediction Toolkit</a>. 
+<BR> Sigmetrics 2021 (with R. Singh, D. Tench, P. Gill)
+<li> <A href="https://arxiv.org/abs/2002.11661">Cluster Trellis: Data Structures & Algorithms for Exact Inference in Hierarchical Clustering</a>
+<BR> AISTATS 2021 (with C. Greenberg, S. Macaluso, N. Monath, J. Lee, P. Flaherty, K. Cranmer, A. McCallum)
+<LI> <A HREF="https://arxiv.org/abs/2012.13976">Intervention Efficient Algorithms for Approximate Learning of Causal Graphs</A>
+<BR> ALT 2021 (with R. Addanki, C. Musco)
+<LI> <A HREF="https://arxiv.org/abs/2010.09141">Diverse Data Selection under Fairness Constraints</A>
+<BR> ICDT 2021 (with Z. Moumoulidou, A. Meliou)
+<LI> <A HREF="https://arxiv.org/abs/2102.08476">Maximum Coverage in the Data Stream Model: Parameterized and Generalized</A> 
+<BR> ICDT 2021 (with D. Tench, H. Vu)
+<LI> <a href="../papers/20-pods.pdf">Cache me Outside: A New Look at DNS Cache Probing</a>
+<!--
+<a href="https://link.springer.com/chapter/10.1007/978-3-030-72582-2_25">Cache me Outside: A New Look at DNS Cache Probing</a>-->
+<BR> PAM 2021 (with A. Niaki, W. Marczak, S. Farhoodi, P. Gill, N. Weaver)
+<LI> <A HREF="https://arxiv.org/abs/2005.11736">Efficient Intervention Design for Causal Discovery with Latents</A>
+<BR> ICML 2020 (with R. Addanki, S. Kasiviswanathan, C. Musco)
+<LI> <A HREF="../papers/20-pods.pdf">Triangle and Four Cycle Counting in the Data Stream Model</A>
+<BR> PODS 2020 (with S. Vorotnikova)
+<LI> <A HREF="https://arxiv.org/abs/2001.06776">Algebraic and Analytic Approaches for Parameter Learning in Mixture Models</A>
+<BR> ALT 2020 (with A. Krishnamurthy, A. Mazumdar, S. Pal)
+<LI> <A HREF="../papers/20-soda.pdf">Vertex Ordering Problems in Directed Graph Streams</A>
+<BR> SODA 2020 (with A. Chakrabarti, P. Ghosh, S. Vorotnikova)
+<LI> <A HREF="https://arxiv.org/abs/1910.14106">Sample Complexity of Learning Mixture of Sparse Linear Regressions</A>
+<BR> NeurIPS 2019 (with A. Krishnamurthy, A. Mazumdar, S. Pal)
+<LI> <A HREF="https://arxiv.org/abs/1904.09618">Trace Reconstruction: Generalized and Parameterized</A>
+<BR> ESA 2019 (with A. Krishnamurthy, A. Mazumdar, S. Pal)
+<LI> <A HREF="../papers/19-pldi.pdf">Mesh: Compacting Memory Management for C/C++ Applications</A>
+<BR> PLDI 2019 (with B. Powers, D. Tench, E. Berger)
+<LI> <A HREF="../papers/19-pods.pdf">The Complexity of Counting Cycles in the Adjacency List Streaming Model</A>
+<BR> PODS 2019 (with J. Kallaugher, E. Price, S. Vorotnikova)
+<LI> <A HREF="../papers/18-neurips.pdf">Compact Representation of Uncertainty In Clustering</A>
+<BR> NeurIPS 2018 (with C. Greenberg, A. Kobren, N. Monath, P. Flaherty, A. McCallum)
+<LI> <A HREF="../papers/18-sigcse.pdf">Connect the Dots to Prove It: A Novel Way to Learn Proof Construction</A>
+<BR> SIGCSE 2018 (with M. McCartin-Lim, B. Woolf)
+<LI> <A HREF="../papers/18-sosa.pdf">A Simple, Space-Efficient, Streaming Algorithm for Matchings in Low Arboricity Graphs</A>
+<BR> SOSA 2018 (with S. Vorotnikova)
+<LI> <A HREF="https://arxiv.org/abs/1706.09197">Storage Capacity as an Information-Theoretic Analogue of Vertex Cover</A>
+<BR> ISIT 2017 (with A. Mazumdar, S. Vorotnikova)
+<LI> <A HREF="../papers/18-theorycs.pdf">Better Approximation of The Streaming Maximum Coverage Problem</A>
+<BR> ICDT 2017 (with H. Vu)
+<LI> <A HREF="../papers/16-approx.pdf">Planar Matchings in Streams Revisited</A>
+<BR> APPROX 2016 (with S. Vorotnikova)
+<LI> <A HREF="../papers/16-esa.pdf">Stochastic Streams: Sample Complexity vs. Space Complexity</A>
+<BR> ESA 2016 (with M. Crouch, G. Valiant,  D. Woodruff)
+<LI> <A HREF="../papers/16-pods.pdf">Better Algorithms for Counting Triangles in Data Streams</A>
+<BR> PODS 2016 (with S. Vorotnikova, H. Vu)
+<LI> <A HREF= "http://arxiv.org/abs/1503.05225">Sketching, Embedding, and Dimensionality Reduction for Information Spaces</A>
+<BR> AISTATS 2016 (with A. Abdullah, R. Kumar, S. Vassilvitskii,  S. Venkatasubramanian)
+<LI> <A HREF= "http://arxiv.org/abs/1505.01731">Kernelization via Sampling with Applications to Dynamic Graph Streams</A>
+<BR> SODA 2016 (with R. Chitnis, G. Cormode, H. Esfandiari, M. Hajiaghayi, M. Monemizadeh,  S. Vorotnikova)
+<LI> <A HREF= "http://arxiv.org/abs/1504.06501">Run Generation Revisited: What Goes Up May or May Not Come Down</A>
+<BR> ISAAC 2015 (with M. Bender, S. McCauley, S. Singh, H. T. Vu)
+<LI> <A HREF= "http://arxiv.org/abs/1506.02574">Catching the head, tail, and everything in between: a streaming algorithm for the degree distribution</A>
+<BR> ICDM 2015 (with  O. Simpson, C. Seshadhri) 
+<LI> <A HREF= "../papers/15-mfcs.pdf">Densest Subgraph in Dynamic Graph Streams</A>
+<BR> MFCS 2015 (with  D. Tench, S. Vorotnikova, H. Vu) 
+<LI> <A HREF= "../papers/15-icml.pdf">Correlation Clustering in Data Streams</A>
+<BR> ICML 2015 (with K. Ahn, G. Cormode, S. Guha, A. Wirth) 
+<LI> <A HREF= "../papers/15-cocoon.pdf">Evaluating Bayesian Networks via Data Streams</A>
+<BR> COCOON 2015 (with H. T. Vu) 
+<LI> <A HREF= "../papers/15-pods.pdf">Vertex and Hyperedge Connectivity in Dynamic Graph Streams
+</A>
+<BR> PODS 2015 (with S. Guha, D. Tench) 
+<LI> <A HREF= "http://eccc.hpi-web.de/report/2014/086/">Verifiable Stream Computation and Arthur–Merlin Communication
+</A>
+<BR> CCC 2015 (with A. Chakrabarti, G. Cormode, J. Thaler, S. Venkatasubramanian) 
+<LI> <A HREF= "../papers/14-esa.pdf">Trace Reconstruction Revisited</A>
+<BR> ESA 2014 (with E. Price, S. Vorotnikova) 
+<LI> <A HREF= "../papers/13-esa.pdf"> Dynamic Graphs in the Sliding-Window Model</A>
+<BR> ESA 2013 (with M. Crouch, D. Stubbs) 
+<LI> <A HREF= "../papers/13-approx1.pdf"> Sketching Earth-Mover Distance on Graph Metrics</A>
+<BR> APPROX 2013 (with D. Stubbs) 
+<LI> <A HREF= "../papers/13-approx.pdf"> Spectral Sparsification of Dynamic Graph Streams</A>
+<BR> APPROX 2013 (with K. Ahn,  S. Guha) 
+<LI> <A HREF= "../papers/13-ictir.pdf"> Efficient Nearest-Neighbor Search in the Probability Simplex</A>
+<BR> ICTIR 2013 (with K. Krstovski, D. Smith, H. Wallach) 
+<LI> <A HREF="../papers/13-stoc.pdf"> Homomorphic Fingerprints under Misalignments</A>
+<BR> STOC 2013 (with A. Andoni, A. Goldberger, E. Porat)
+<LI> <A HREF="../papers/12-oopsla.pdf"> AUTOMAN: A Platform for Integrating Human-Based and Digital Computation</A>
+<BR> OOPSLA 2012 (with D. Barowy, C. Curtsinger,  E. Berger). [<a href="http://www.newscientist.com/article/mg21628945.500-your-next-boss-could-be-a-computer.html">Press Coverage</a>]. 
+<LI> <A HREF= "../papers/12-icml.pdf"> Approximate Principal Direction Trees</A>
+<BR> ICML 2012 (with M. McCartin-Lim, R. Wang)
+<LI> <A HREF= "../papers/12-pods2.pdf"> Space-Efficient Estimation of Statistics over Sub-Sampled Streams</A>
+<BR> PODS 2012 (with A. Pavan, S. Tirthapura, D. Woodruff)
+<LI> <A HREF= "../papers/12-pods1.pdf"> Graph Sketches: Sparsfiers, Spanners, and Subgraphs</A>
+<BR> PODS 2012 (with K. Ahn, S. Guha) 
+<LI> <A HREF= "../papers/12-dynamic.pdf"> Analyzing Graph Structure via Linear Measurements</A>
+<BR> SODA 2012 (with K. Ahn, S. Guha) 
+<LI> <A HREF= "../papers/11-median.pdf"> The Shifting Sands Algorithm</A>
+<BR> SODA 2012 (with P. Valiant) 
+<LI> <A HREF= "../papers/11-approx.pdf"> Periodicity and Cyclic Shifts via Linear Sketches</A>
+<BR> APPROX 2011 (with M. Crouch) 
+<LI> <A HREF= "../papers/11-sigmod.pdf"> A Platform for Scalable One-pass Analytics using MapReduce</A>
+<BR> SIGMOD 2011 (with B. Li, E. Mazur, Y. Diao, P. Shenoy) 
+<LI> <A HREF= "../papers/11-stacs.pdf">Polynomial Fitting of Data Streams with Applications to Codeword Testing</A>
+<BR> STACS 2011 (with A. Rudra, S. Uurtamo) 
+<LI> <A HREF= "../papers/10-cikm.pdf">Fast Query Expansion Using Approximations of Relevance Models</A>
+<BR> CIKM 2010 (with M. Cartright, J. Allan, V. Lavrenko) 
+<LI> <A HREF= "http://eccc.hpi-web.de/report/2011/106/">The Limits of Two-Party Differential Privacy</A>
+<BR> FOCS 2010 (with I. Mironov, T. Pitassi, O. Reingold, K. Talwar, S. Vadhan) 
+<LI> <A HREF= "../papers/10-augindex.pdf">Information Cost Tradeoffs for Augmented Index and Streaming Language Recognition</A>
+<BR> FOCS 2010 (with A. Chakrabarti, G. Cormode, R. Kondapally)
+ <LI> <A HREF="../papers/10-vldb.pdf">Conditioning and Aggregating Uncertain Data Streams: Going Beyond Expectations
+</A>
+<BR> VLDB 2010 (with T. Tran, Y. Diao, L. Peng, A. Liu) 
+ <LI> <A HREF="../papers/10-pods.pdf">Optimizing Linear Counting Queries Under Differential Privacy</A>
+<BR> PODS 2010 (with C. Li, M. Hay, V. Rastogi, G. Miklau) 
+<LI> <A HREF="../papers/10-ics.pdf">Space-Efficient Estimation of Robust Statistics and Distribution Testing</A>
+<BR> ICS 2010 (with S. Chien, K. Ligett)
+<LI> <A HREF="../papers/09-vldb.pdf">Probabilistic Histograms for Probabilistic Data</A>
+<BR> VLDB 2009 (with G. Cormode, A. Deligiannakis, M. Garofalakis)
+ <LI> <A HREF="../papers/09-esa.pdf">The Oil Searching Problem</A>
+<BR> ESA 2009 (with K. Onak, R. Panigrahy) 
+<LI> <A HREF="http://eccc.hpi-web.de/report/2012/022/">Annotations in Data Streams</A>
+<BR> ICALP 2009 (with A. Chakrabarti, G. Cormode). 
+<LI> <A HREF="../papers/09-sigmod.pdf">Sampling to Estimate Conditional Functional Dependencies</A>
+<BR> SIGMOD 2009 (with  G. Cormode, L. Golab,  F. Korn, D. Srivastava, X. Zhang)
+ <LI> <A HREF="../papers/08-colt.pdf">Finding Metric Structure in Information Theoretic Clustering</A>
+<BR> COLT 2008 (with K. Chaudhuri) 
+ <LI> <A HREF="../papers/08-lis.pdf">Tight Lower Bounds for Multi-Pass Stream  Computation via Pass Elimination </A>
+<BR> ICALP 2008 (with S. Guha) 
+<LI> <A HREF="../papers/08-pods.pdf">Approximation Algorithms for Clustering Uncertain Data</A>
+<BR> PODS 2008 (with G. Cormode) 
+<LI> <A HREF="http://eccc.hpi-web.de/report/2011/062/">Robust Lower Bounds for Communication and Stream Computation</A>
+<BR> STOC 2008 (with A. Chakrabarti, G. Cormode) <A HREF="../slides/08-stoc.pdf"> Slides </A> 
+<LI> <A HREF="../papers/08-latin.pdf">Sorting and Selection with Random Costs</A>
+<BR> LATIN 2008 (with S. Angelov, K. Kunal)
+<LI> <A HREF="../papers/08-soda.pdf">Declaring Independence via the Sketching of Sketches</A>
+<BR> SODA 2008 (with P. Indyk) <A HREF="../slides/08-sketchsketchslides.pdf">
+<LI> <A HREF="../papers/08-ldpc.pdf"> On the Hardness of Approximating Stopping 
+and Trapping Sets in LDPC Codes </A>
+<BR> ITW 2007 (with O. Milenkovic) 
+<LI> <A HREF="../papers/09-streamorderstatistics.pdf">
+Lower Bounds for Quantile Estimation in Random-Order and Multi-Pass Streaming</A>
+<BR> ICALP 2007 (with S. Guha) <A HREF="../slides/07-icalpb.pdf"> Slides </A>
+<LI> 
+<A HREF="../papers/07-icalp2.pdf">Checking and Spot-Checking of Heaps</A>
+<BR> ICALP 2007 (with M. Chu, S. Kannan) <A HREF="../slides/07-icalpa.pdf"> Slides </A>
+<LI> 
+<A HREF="../papers/07-unsketchables.pdf"> Sketching Information Divergences</A>
+<BR> COLT 2007 (with S. Guha, P. Indyk) 
+<BR> Invited to Special Issue of Machine Learning Journal
+<LI> 
+<A HREF="../papers/08-tods.pdf"> Estimating Statistical Aggregates on Probabilistic Data Streams</A>
+<BR> PODS 2007 (with T. S. Jayram, S. Muthukrishnan, E. Vee)
+<BR> Invited to Special Issue of ACM Transactions on Database Systems
+<LI> 
+<A HREF="../papers/07-aistats.pdf"> Space-Efficient Sampling
+ </A> 
+<BR> AISTATS 2007 (with S. Guha)
+<LI> <A HREF="../papers/07-soda2.pdf">
+Island Hopping and Path Colouring with Applications to WDM Network Design</A>
+<BR> SODA 2007 (with F.B. Shepherd) <A HREF="../slides/soda07talkb.pdf"> Slides </A>
+<LI> <A HREF="../papers/07-entropy.pdf">A Near-Optimal Algorithm for Computing the Entropy of a Stream</A>
+<BR> SODA 2007 (with A. Chakrabarti, G. Cormode) <A HREF="../slides/soda07talka.pdf"> Slides </A>
+<LI> <A HREF="../papers/06-kdd.pdf">Spatial Scan Statistics: Approximations and Performance Study</A>
+<BR> KDD 2006 (with D. Agarwal, J. Phillips, S. Venkatasubramanian, Z. Zhu)
+<LI> <A HREF="../papers/09-streamorderstatistics.pdf">
+Approximate Quantiles and the Order of the Stream</A>
+<BR> PODS 2006 (with S. Guha)
+<LI> <A HREF="../papers/06-oracles.pdf">
+Streaming and Sublinear Approximation of Entropy and Information 
+Distances
+</A>
+<BR> SODA 2006
+(with S. Guha, S. Venkatasubramanian)
+<LI> <A HREF="../papers/05-isit.pdf">
+More on Reconstructing Strings from Random Traces: Insertions and Deletions
+</A>
+<BR> ISIT 2005
+(with S. Kannan) <A HREF="../slides/isit05talk.pdf"> Slides </A>
+<LI> <A HREF="../papers/05-approx2.pdf">
+Approximating the Best-Fit Tree Under L_p Norms
+</A>
+<BR> APPROX 2005  
+(with B. Harb, S. Kannan) <A HREF="../slides/approx05talkb.pdf"> Slides </A>
+<LI> <A HREF="../papers/05-approx1.pdf">
+Finding Matchings in the Streaming Model 
+</A>
+<BR> APPROX 2005 <A HREF="../slides/approx05talka.pdf"> Slides </A>
+<LI> <A HREF="../papers/08-graphdistances.pdf">
+Graph Distances in the Streaming Model: The Value of Space
+</A>
+<BR> SODA 2005.
+(with J. Feigenbaum, S. Kannan, S. Suri, J. Zhang)<A HREF="../slides/soda05talk.pdf"> Slides </A>
+ <LI> <A HREF="../papers/04-fun.pdf">A Problem in Scheduling: Your 
+Time Starts Now...</A> <BR> FUN with Algorithms 2004 
+ <LI> <A HREF="../papers/04-isit.pdf">List decoding of concatenated codes: improved performance estimates</A>
+<BR> ISIT 2004 (with A. Barg)  <A HREF="../slides/isit04talk.pdf"> Slides </A>
+<LI> <A HREF="../papers/05-tcs.pdf">On Graph Problems in a Semi-Streaming 
+Model</A>
+<BR> ICALP 2004 (with J. Feigenbaum, S. Kannan, S. Suri, J. Zhang)
+<BR> Invited to Special Issue of Theoretical Computer Science 
+<LI> <A HREF="../papers/04-soda.pdf">Reconstructing Strings from Random Traces </A>
+<BR> SODA 2004 (with T. Batu, S. Kannan, S. Khanna)
+<LI> <A HREF="../papers/05-ieeetrans.pdf">More on the Reliability Function of the Binary Symmetric Channel</A>
+<BR> ISIT 2003 (with A. Barg)  <A HREF="../slides/isit03talk.pdf"> Slides </A>
+<LI> <A HREF="../papers/05-ieeetrans.pdf">Distance distribution of binary codes and the error probability of decoding</A>
+<BR> WCC 2003 International Workshop on Coding and Cryptography (with A. Barg)
+<LI> 
+<A HREF="../papers/99-brazcm.pdf">Physical Modeling of Musical Instruments using Bond Graphs</A>
+<BR>
+Brazilian Symposium on Computer Music 1999 (with E. Miranda, P. Gawthrop)
+</OL>
+
+
+Manuscripts, Invited Papers, etc.:
+<OL>
+<LI> <A HREF="http://people.cs.umass.edu/~mcgregor/papers/13-graphsurvey.pdf">Graph Stream Algorithms: A Survey</A>
+<BR> SIGMOD Record
+<LI> <A HREF="http://people.cs.umass.edu/~mcgregor/papers/17-csr.pdf">Graph Sketching and Streaming:
+New Approaches for Analyzing Massive Graphs</A>
+<BR> CSR 2017
+<LI> <A HREF="http://people.cs.umass.edu/~mcgregor/papers/13-cie.pdf">Towards a Theory of Homomorphic Compression</A>
+<BR> Invited Session at CiE 2013
+<LI> <A HREF="http://arxiv.org/pdf/0808.2222v1">Better Bounds for Frequency Moments in Random-Order Streams</A>
+<BR> Manuscript (with A. Andoni, K. Onak, R. Panigrahy) 
+<LI> <A HREF="../papers/08-graphmining.pdf">
+Graph Mining in Streams</A>
+<BR> Entry for the Encyclopedia of Database Systems
+<LI> <A HREF="../papers/07-thesis.pdf">
+Processing Data Streams</A>
+<BR> Ph.D. Thesis (Advisor: Sampath Kannan) <A HREF="../slides/06-defense.pdf"> Slides </A>
+<LI> <A HREF="../papers/07-openproblems.pdf">Open Questions In Data Streams and Related Topics</A>
+<BR> Questions arising at the IITK Workshop on Algorithms for Data Streams 2006.
+<LI> <A HREF="../papers/11-openproblems.pdf">Open Questions In Data Streams, Property Testing, and Related Topics</A>
+<BR> Questions arising at Sublinear Algorithms 2011 and IITK Workshop on Algorithms for Data Streams 2009  (with P. Indyk, I. Newman,  K. Onak)
+
+</OL>  
+
+
+<HR SIZE=3 WIDTH="100%">
+<P>
+
+<a name="#copyright">NB:</a>
+Since most of the papers above are published, the copyright has been transferred to the respective publishers. Therefore, the papers cannot be duplicated for commercial purposes. See below for ACM's copyright notice.
+
+<p>Copyright 20xy by the Association for Computing Machinery, Inc. Permission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that new copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted.
 
